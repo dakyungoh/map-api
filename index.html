@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kakao map 시작하기</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>지도에 코드스테이츠 위치 찍어보기</p>
+    <div id="map" style="width: 500px; height: 400px"></div>
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d814afd60adce51b5ada00862d08f88f"
+    ></script>
+    <script>
+      var container = document.getElementById("map");
+      var options = {
+        center: new kakao.maps.LatLng(37.49655444998249, 127.0247519188435),
+        level: 3,
+      };
+
+      var map = new kakao.maps.Map(container, options);
+    </script>
+    <script type="application/javascript" src="./index.js"></script>
+  </body>
+</html>
