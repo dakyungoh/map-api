@@ -28,7 +28,11 @@ function addPlaceItem(placeItem) {
   var nodeText = document.createTextNode(placeItem.name);
   elemLi.appendChild(nodeText);
   elemLi.addEventListener("click", () => {
-    console.log("clicked", placeItem.name);
+    moveTo(placeItem.position);
   });
   elemUl.appendChild(elemLi);
+}
+
+function moveTo(position) {
+  map.setCenter(new kakao.maps.LatLng(position[0], position[1]));
 }
