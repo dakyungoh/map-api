@@ -27,5 +27,8 @@ function addPlaceItem(placeItem) {
   const elemLi = document.createElement("li");
   var nodeText = document.createTextNode(placeItem.name);
   elemLi.appendChild(nodeText);
+  elemLi.addEventListener("click", () => {
+    console.log("clicked", placeItem.name);
+  });
   elemUl.appendChild(elemLi);
 }
