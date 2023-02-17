@@ -6,19 +6,26 @@ var mapContainer = document.getElementById("map"), // 지도를 표시할 div
 
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
-// 마커가 표시될 위치입니다
-var markerPosition = new kakao.maps.LatLng(
-  37.49655444998249,
-  127.0247519188435
-);
+// place-list 데이터
+const placeList = [
+  { name: "강남역", position: [37.49795170000097, 127.02343455393527] },
+  { name: "서울역", position: [37.5546716286321, 126.97059786645119] },
+  { name: "동탄역", position: [37.200144674551666, 127.09564098869083] },
+];
 
-// 마커를 생성합니다
-var marker = new kakao.maps.Marker({
-  position: markerPosition,
+// place-list 그리기
+placeList.forEach((place) => {
+  addPlaceItem(place);
+  let marker = new kakao.maps.Marker({
+    position: new kakao.maps.LatLng(...place.position),
+  });
+  marker.setMap(map);
 });
 
-// 마커가 지도 위에 표시되도록 설정합니다
-marker.setMap(map);
-
-// 아래 코드는 지도 위의 마커를 제거하는 코드입니다
-// marker.setMap(null);
+function addPlaceItem(placeItem) {
+  const elemUl = document.getElementById("place-list");
+  const elemLi = document.createElement("li");
+  var nodeText = document.createTextNode(placeItem.name);
+  elemLi.appendChild(nodeText);
+  elemUl.appendChild(elemLi);
+}

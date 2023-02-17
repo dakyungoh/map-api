@@ -8,11 +8,13 @@
   <body>
     <p>지도에 코드스테이츠 위치 찍어보기</p>
     <div id="map" style="width: 500px; height: 400px"></div>
+    <ul id="place-list"></ul>
     <script
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d814afd60adce51b5ada00862d08f88f"
     ></script>
     <script>
+      console.log(kakao);
       var container = document.getElementById("map");
       var options = {
         center: new kakao.maps.LatLng(37.49655444998249, 127.0247519188435),
