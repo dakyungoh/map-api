@@ -4,10 +4,63 @@
 
 body {
   background-color: antiquewhite;
+  border: 2px solid gold;
+  border-radius: 20px;
+  width: 600px;
+  height: 700px;
+  margin: 200px auto;
+  -webkit-box-shadow: 2px 3px 8px 0px rgba(138, 128, 63, 1);
+  -moz-box-shadow: 2px 3px 8px 0px rgba(138, 128, 63, 1);
+  box-shadow: 2px 3px 8px 0px rgba(138, 128, 63, 1);
 }
 
-p {
+.p1 {
+  margin-bottom: 0;
   text-align: center;
   font-size: 30px;
+  color: orange;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.p2 {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 20px;
+  color: orangered;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+div {
+  display: flex;
+  margin: auto;
+}
+
+ul {
+  margin: 0 auto;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  border: 2px dotted darkgray;
+  margin: 15px auto;
+  padding: 10px;
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: gainsboro;
+  -webkit-box-shadow: 2px 3px 18px 0px rgba(117, 106, 117, 1);
+  -moz-box-shadow: 2px 3px 18px 0px rgba(117, 106, 117, 1);
+  box-shadow: 2px 3px 18px 0px rgba(117, 106, 117, 1);
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
